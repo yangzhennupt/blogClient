@@ -12,6 +12,9 @@ export default {
 </script>
 
 <style lang="scss">
+body{
+	font-size: 62.5%;
+}
 #app {
  
 }
