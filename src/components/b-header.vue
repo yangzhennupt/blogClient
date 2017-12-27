@@ -38,7 +38,7 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       theme1:"light",
-      logoUrl:"/static/image/blog_logo.png"
+      logoUrl:"/static/image/blog_logo.svg"
     }
   },
   methods:{
