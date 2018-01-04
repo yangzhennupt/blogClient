@@ -10,6 +10,9 @@ export default {
       return {
           msg:'ddd'
       }
+  },
+  created(){
+      console.log(this.$route.params);
   }
 }
 </script>
