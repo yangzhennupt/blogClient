@@ -6,6 +6,8 @@ import router from './router'
 import Vuex from 'vuex';
 import iView from 'iview';
 import marked from 'marked';
+import mavonEditor from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
 import axios from 'axios';
 import 'iview/dist/styles/iview.css';
 
@@ -13,6 +15,7 @@ Vue.config.productionTip = false;
 
 Vue.use(Vuex);
 Vue.use(iView);
+Vue.use(mavonEditor);
 
 marked.setOptions({
   renderer: new marked.Renderer(),

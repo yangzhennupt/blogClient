@@ -1,6 +1,6 @@
 <template>
   <div id="blogEditor">
-      编辑界面
+      <mavon-editor v-model="value"/>
   </div>
 </template>
 
@@ -8,8 +8,11 @@
 export default {
   data(){
       return {
-          msg:'ddd'
+          value:''
       }
+  },
+  computed:{
+       
   },
   created(){
       console.log(this.$route.params);
@@ -17,7 +20,7 @@ export default {
 }
 </script>
 
-<<style lang="sass" scoped>
+<style lang="sass" scoped>
 
 </style>
 
