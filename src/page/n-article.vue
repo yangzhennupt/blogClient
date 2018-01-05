@@ -38,5 +38,9 @@ export default{
 </script>
 
 <style scoped>
-	
+	#article-content{
+		width:100rem;
+		margin:0 auto;
+
+	}
 </style>
