@@ -56,6 +56,7 @@ export default {
     justify-content: center;
     position: relative;
     box-shadow: 0 0px 12px 0px #b3b3b3;
+    background: #fff;
 }
 .b-logo{
     position: absolute;

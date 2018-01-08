@@ -3,6 +3,9 @@
     <Form :model="blog" label-position="left" >
          <FormItem label="请输入文章的标题：">
             <Input v-model="blog.title"></Input>
+        </FormItem>
+        <FormItem label="请输入文章的简介：">
+            <Input v-model="blog.introduction"></Input>
         </FormItem>       
     </Form>
     <mavon-editor v-model="blog.value"/>    
@@ -17,7 +20,8 @@ export default {
       return {
           blog:{
               title:'',
-              value:''
+              value:'',
+              introduction:''
           }
       }
   },
@@ -28,6 +32,7 @@ export default {
                 this.$Spin.show();
                 this.$axios.post('/api/blog',{
                     blog_title:self.blog.title,
+                    blog_introduction:self.blog.introduction,
                     blog_content:self.blog.value
                 }).then(res=>{
                     self.$Message.success('博客保存成功！');

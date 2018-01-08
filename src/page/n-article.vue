@@ -2,7 +2,7 @@
 	<ul id="article-content">
 		<li class="b-article" v-for="item in  transArticle" :key="item.id">
 			<h1><a href="javascript:;">{{item.blog_title}}</a></h1>
-			<div v-html="item.blog_content"></div>
+			<div v-html="item.blog_introduction"></div>
 		</li>
 	</ul>
 </template>
@@ -43,6 +43,8 @@ export default{
 		margin: 0 auto;
 		background: #fff;
 		padding: 20px;
+		box-shadow: 1px 1px 5px #bdbdbd;
+		border-radius: 3px;
 		.b-article{
 			border-bottom: 1px solid #dedede;
 			padding: 5px 0;
