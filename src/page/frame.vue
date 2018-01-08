@@ -1,7 +1,9 @@
 <template>
 	<div id="b-wrap">
 		<BHeader></BHeader>
-		<NArticle></NArticle>
+        <div class="b-content">
+            <NArticle></NArticle>
+        </div>		
 	</div>
 </template>
 
@@ -22,4 +24,9 @@ export default{
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.b-content{
+    padding: 20px;
+    background: #f3f3f3;
+}
+</style>

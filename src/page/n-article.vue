@@ -1,7 +1,7 @@
 <template>
 	<ul id="article-content">
 		<li class="b-article" v-for="item in  transArticle" :key="item.id">
-			<h1>{{item.blog_title}}</h1>
+			<h1><a href="javascript:;">{{item.blog_title}}</a></h1>
 			<div v-html="item.blog_content"></div>
 		</li>
 	</ul>
@@ -37,10 +37,22 @@ export default{
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped >
 	#article-content{
-		width:100rem;
-		margin:0 auto;
+		width: 100%;
+		margin: 0 auto;
+		background: #fff;
+		padding: 20px;
+		.b-article{
+			border-bottom: 1px solid #dedede;
+			padding: 5px 0;
+			>h1{
+				margin-bottom: 5px;
+			}
+			>div{
+				font-size:14px;
+			}
+		}	
 
-	}
+	}	
 </style>

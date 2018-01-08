@@ -1,5 +1,5 @@
 <template>
-  <div id="b-head">
+  <header id="b-head">
     <img  :src="logoUrl" class="b-logo">
     <Menu mode="horizontal" :theme="theme1" active-name="0"  @on-select="changMeau">
         <MenuItem name="0">
@@ -29,7 +29,7 @@
             </MenuGroup>
         </Submenu>
     </Menu>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -55,6 +55,7 @@ export default {
     display: flex;
     justify-content: center;
     position: relative;
+    box-shadow: 0 0px 12px 0px #b3b3b3;
 }
 .b-logo{
     position: absolute;
