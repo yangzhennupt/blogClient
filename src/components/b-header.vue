@@ -14,20 +14,10 @@
             <Icon type="android-desktop"></Icon>
             UI设计
         </MenuItem>
-        <Submenu name="3">
-            <template slot="title">
-                <Icon type="stats-bars"></Icon>
-                服务端
-            </template>
-            <MenuGroup title="Node">
-                <MenuItem name="3-1">基础</MenuItem>
-                <MenuItem name="3-2">框架</MenuItem>
-            </MenuGroup>
-            <MenuGroup title="Java">
-                <MenuItem name="3-4">基础</MenuItem>
-                <MenuItem name="3-5">框架</MenuItem>
-            </MenuGroup>
-        </Submenu>
+        <MenuItem name="3">
+            <Icon type="stats-bars"></Icon>
+            服务端     
+        </MenuItem>
     </Menu>
   </header>
 </template>
