@@ -6,7 +6,12 @@
         </FormItem>
         <FormItem label="请输入文章的简介：">
             <Input v-model="blog.introduction"></Input>
-        </FormItem>       
+        </FormItem>
+        <FormItem label="请选择文章的分类：">    
+            <Select v-model="blog.type" style="width:200px">
+                <Option v-for="item in typeList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+            </Select> 
+        </FormItem>  
     </Form>
     <mavon-editor v-model="blog.value"/>    
     <Button type="primary" @click="submitText" class="saveBtn">保存</Button>
@@ -21,19 +26,32 @@ export default {
           blog:{
               title:'',
               value:'',
-              introduction:''
-          }
+              introduction:'',
+              type:''
+              
+          },
+          typeList:[{
+                  label:'前端',
+                  value:'1'
+              },{
+                  label:'UI',
+                  value:'2'
+              },{
+                  label:'服务端',
+                  value:'3'
+        }]
       }
   },
   methods:{
       submitText(){
           var self = this;
-          if(this.blog.title&&this.blog.value){
+          if(this.blog.title&&this.blog.value&&this.blog.introduction&&this.blog.type){
                 this.$Spin.show();
                 this.$axios.post('/api/blog',{
                     blog_title:self.blog.title,
                     blog_introduction:self.blog.introduction,
-                    blog_content:self.blog.value
+                    blog_content:self.blog.value,
+                    blog_type:self.blog.type
                 }).then(res=>{
                     self.$Message.success('博客保存成功！');
                     self.$Spin.hide();
@@ -42,7 +60,7 @@ export default {
                     self.$Spin.hide();
                 })
           }else{
-                self.$Message.warning('博客标题或内容不能为空！'); 
+                self.$Message.warning('所有为必填项，不能为空！'); 
           }
           
       }
@@ -62,6 +80,9 @@ export default {
 }
 .saveBtn{
     margin-top: 15px;
+}
+.markdown-body{
+    z-index: 0;
 }
 </style>
 
