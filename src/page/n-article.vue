@@ -11,7 +11,7 @@
 
 
 export default{
-	name:'article',
+	name:'blogArticle',
 	data(){
 		return{
 			msg:'# hello world #',
@@ -27,12 +27,23 @@ export default{
 		 }
 	},
 	beforeCreate(){
-		var self = this;
-		this.$axios.get('/api/blog').then(res=>{
-			self.article  = res.data;
-		}).catch(err=>{
-			console.log(err)
-		})
+			var self = this;
+			console.log(self.getBlogByType)
+			this.$axios.get('/api/blog').then(res=>{
+				self.article  = res.data;
+			}).catch(err=>{
+				console.log(err)
+			})
+	},
+	methods:{
+		getBlogByType(){
+			var self = this;
+			this.$axios.get('/api/blog').then(res=>{
+				self.article  = res.data;
+			}).catch(err=>{
+				console.log(err)
+			})
+		}
 	}
 }
 </script>
