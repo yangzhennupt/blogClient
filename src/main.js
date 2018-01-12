@@ -10,18 +10,14 @@ import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 import axios from 'axios';
 import 'iview/dist/styles/iview.css';
-import { STATE, MUTATIONS, ACTION } from './store/store_index';
+import { STATE, MUTATIONS, ACTION } from './store';
 Vue.config.productionTip = false;
 
-Vue.use(Vuex);
+
 Vue.use(iView);
 Vue.use(mavonEditor);
 
-const store = new Vuex.Store({
-  state:STATE ,
-  mutations: MUTATIONS,
-  actions: ACTION
-});
+
 
 marked.setOptions({
   renderer: new marked.Renderer(),
