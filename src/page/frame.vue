@@ -25,8 +25,10 @@ export default{
 </script>
 
 <style scoped lang="scss">
+
 .b-content{
     padding: 20px;
     background: #f3f3f3;
+    padding-top:80px;
 }
 </style>

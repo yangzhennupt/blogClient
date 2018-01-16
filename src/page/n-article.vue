@@ -1,8 +1,10 @@
 <template>
 	<ul id="article-content">
 		<li class="b-article" v-for="item in  transArticle" :key="item.id">
-			<h1><a href="javascript:;">{{item.blog_title}}</a></h1>
-			<div v-html="item.blog_introduction"></div>
+			<h1 class="article-title"><a href="javascript:;">{{item.blog_title}}</a></h1>
+			<!-- <div v-html="item.blog_introduction" class="markdown-area"></div> -->
+			<p>{{item.blog_introduction}}</p>
+			<div class="article-info">{{item.blog_time}}</div>
 		</li>
 	</ul>
 </template>
@@ -57,15 +59,37 @@ export default{
 		box-shadow: 1px 1px 5px #bdbdbd;
 		border-radius: 3px;
 		.b-article{
-			border-bottom: 1px solid #dedede;
+			border-bottom: 1px dashed #dedede;
 			padding: 5px 0;
 			>h1{
 				margin-bottom: 5px;
+				
+				a{
+					color: #333
+				}
 			}
-			>div{
+			>p{
 				font-size:14px;
+				color: #666;
 			}
-		}	
-
-	}	
+		}
+			
+		
+	}
+	@media screen and (max-width: 1920px) {
+			#article-content{
+				width:100rem;
+			}	
+	}
+	@media screen and (max-width: 1660px) {
+			#article-content{
+				width:80rem;
+			}
+	}
+	@media screen and (max-width: 1366px) {
+			#article-content{
+				width:60rem;
+			}
+	}
+	
 </style>
