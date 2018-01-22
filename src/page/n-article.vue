@@ -42,10 +42,13 @@ export default{
 				type='';
 			}
 			var self = this;
+			this.$Spin.show();
 			this.$axios.get('/api/blog/'+type).then(res=>{
 				self.article  = res.data;
+				this.$Spin.hide();
 			}).catch(err=>{
-				console.log(err)
+				console.log(err);
+				this.$Spin.hide();
 			})
 		}
 	},
