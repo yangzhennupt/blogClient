@@ -1,8 +1,8 @@
 <template>
   <header id="b-head">
     <img  :src="logoUrl" class="b-logo">
-    <Menu mode="horizontal" :theme="theme1" active-name="0"  @on-select="changMeau">
-        <MenuItem name="0">
+    <Menu mode="horizontal" :theme="theme1" active-name=""  @on-select="changMeau">
+        <MenuItem name="">
             <Icon type="home"></Icon>
             全部
         </MenuItem>
@@ -33,7 +33,7 @@ export default {
   },
   methods:{
     changMeau(name){
-        console.log(name);
+        this.$store.commit('filterBlog',name);
     }
   }
 }

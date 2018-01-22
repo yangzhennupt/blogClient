@@ -1,6 +1,6 @@
 <template>
 	<ul id="article-content">
-		<li class="b-article" v-for="item in  transArticle" :key="item.id">
+		<li class="b-article" v-for="item in  article" :key="item.id">
 			<h1 class="article-title"><a href="javascript:;">{{item.blog_title}}</a></h1>
 			<!-- <div v-html="item.blog_introduction" class="markdown-area"></div> -->
 			<p>{{item.blog_introduction}}</p>
@@ -10,41 +10,49 @@
 </template>
 
 <script>
-
+import {mapState} from 'vuex';
 
 export default{
 	name:'blogArticle',
 	data(){
 		return{
-			msg:'# hello world #',
 			article:[]
 		}
 	},
 	computed:{
-		 transArticle(){			 
-			 for(var i = 0;i<this.article.length;i++){
-				this.article[i].blog_content=this.$marked(this.article[i].blog_content);
-			 }
-		 	return this.article;
-		 }
+		...mapState(['blogType']),
 	},
-	beforeCreate(){
-			var self = this;
-			console.log(self.getBlogByType)
-			this.$axios.get('/api/blog').then(res=>{
-				self.article  = res.data;
-			}).catch(err=>{
-				console.log(err)
-			})
+		
+
+
+
+		//  transArticle(){			 
+		// 	 for(var i = 0;i<this.article.length;i++){
+		// 		this.article[i].blog_content=this.$marked(this.article[i].blog_content);
+		// 	 }
+		//  	return this.article;
+		//  }
+
+	created(){
+		this.getBlogByType();
 	},
 	methods:{
-		getBlogByType(){
+		getBlogByType(type){
+			if(type==undefined){
+				type='';
+			}
 			var self = this;
-			this.$axios.get('/api/blog').then(res=>{
+			this.$axios.get('/api/blog/'+type).then(res=>{
 				self.article  = res.data;
 			}).catch(err=>{
 				console.log(err)
 			})
+		}
+	},
+	watch:{
+		blogType:function(newValue){
+			console.log('changed');
+			this.getBlogByType(newValue);
 		}
 	}
 }
@@ -71,6 +79,10 @@ export default{
 			>p{
 				font-size:14px;
 				color: #666;
+				margin-bottom: 5px;
+			}
+			.article-info{
+				color: #999;
 			}
 		}
 			

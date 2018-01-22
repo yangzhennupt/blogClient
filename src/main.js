@@ -10,7 +10,7 @@ import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 import axios from 'axios';
 import 'iview/dist/styles/iview.css';
-import { STATE, MUTATIONS, ACTION } from './store';
+import store from './store';
 Vue.config.productionTip = false;
 
 
@@ -37,6 +37,7 @@ Vue.prototype.$marked = marked;
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })
