@@ -1,8 +1,8 @@
 <template>
 	<ul id="article-content">
-		<li class="b-article" v-for="item in  article" :key="item.id">
-			<h1 class="article-title"><a href="javascript:;">{{item.blog_title}}</a></h1>
-			<!-- <div v-html="item.blog_introduction" class="markdown-area"></div> -->
+		<li class="b-article" v-for="item in  article" :key="item.blog_id">
+			<h1 class="article-title"><a :href="'/#/detail/'+item.blog_id" target="_blank">{{item.blog_title}}</a></h1>
+			
 			<p>{{item.blog_introduction}}</p>
 			<div class="article-info">{{item.blog_time}}</div>
 		</li>
@@ -26,12 +26,6 @@ export default{
 
 
 
-		//  transArticle(){			 
-		// 	 for(var i = 0;i<this.article.length;i++){
-		// 		this.article[i].blog_content=this.$marked(this.article[i].blog_content);
-		// 	 }
-		//  	return this.article;
-		//  }
 
 	created(){
 		this.getBlogByType();
