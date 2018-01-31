@@ -8,7 +8,9 @@
 export default {
     data(){
         return {
-            blog:{}
+            blog:{
+              blog_content:  null
+            }
         }
     },
     computed:{     
@@ -17,14 +19,17 @@ export default {
 			// 	this.article[i].blog_content=this.$marked(this.article[i].blog_content);
 			//  }
              // return this.article;
+             console.log('计算属性')
+             console.log(this.blog)
              return this.$marked(this.blog.blog_content);
 		 }
     },
-    created(){
+    beforeCreate(){
         let self = this,
             id = this.$route.params.id;
             this.$Spin.show();
 			this.$axios.get('/api/blog/detail/'+id).then(res=>{
+                console.log('赋值')
 				self.blog  = res.data;
 				this.$Spin.hide();
 			}).catch(err=>{
