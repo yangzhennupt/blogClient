@@ -8,15 +8,15 @@
         </MenuItem>
         <MenuItem name="1">
             <Icon type="ios-paper"></Icon>
-            大前端
+            前端
         </MenuItem>
         <MenuItem name="2">
             <Icon type="android-desktop"></Icon>
-            UI设计
+            服务端
         </MenuItem>
         <MenuItem name="3">
             <Icon type="stats-bars"></Icon>
-            服务端     
+            大杂烩     
         </MenuItem>
     </Menu>
   </header>
