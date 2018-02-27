@@ -34,10 +34,10 @@ export default {
                   label:'前端',
                   value:'1'
               },{
-                  label:'UI',
+                  label:'服务端',
                   value:'2'
               },{
-                  label:'服务端',
+                  label:'大杂烩',
                   value:'3'
         }]
       }
