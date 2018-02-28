@@ -9,7 +9,7 @@ export default {
     data(){
         return {
             blog:{
-              blog_content:  '# test #'
+              blog_content:  ''
             }
         }
     },

@@ -11,6 +11,8 @@ import 'mavon-editor/dist/css/index.css'
 import axios from 'axios';
 import 'iview/dist/styles/iview.css';
 import store from './store';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/googlecode.css';
 Vue.config.productionTip = false;
 
 
@@ -23,11 +25,12 @@ marked.setOptions({
   renderer: new marked.Renderer(),
   gfm: true,
   tables: true,
-  breaks: false,
+  breaks: true,
   pedantic: false,
   sanitize: false,
   smartLists: true,																														
-  smartypants: false
+  smartypants: false,
+  highlight: (code) => hljs.highlightAuto(code).value
 });
 
 Vue.prototype.$axios = axios;
