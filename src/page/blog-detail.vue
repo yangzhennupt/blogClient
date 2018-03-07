@@ -37,5 +37,7 @@ export default {
 }
 </script>
 <style scoped>
-
+    .markdown-area{
+        font-size: 14px;
+    }
 </style>
