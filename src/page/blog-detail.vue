@@ -37,10 +37,15 @@ export default {
 }
 </script>
 <style scoped>
+    #blogDetail{
+        background: #fff;
+        width: 56rem;
+        margin: 0 auto;
+        padding: 2rem;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
+        border-radius: 2px;
+    }
     .markdown-area{
         font-size: 14px;
-    }
-    body{
-        background: #fff;
     }
 </style>

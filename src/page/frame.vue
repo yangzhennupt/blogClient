@@ -2,7 +2,7 @@
 	<div id="b-wrap">
 		<BHeader></BHeader>
         <div class="b-content">
-            <NArticle></NArticle>
+            <router-view/>
         </div>		
 	</div>
 </template>
@@ -18,8 +18,7 @@ export default{
         }
     },
     components:{
-    	BHeader,
-    	NArticle
+    	BHeader
     }
 }
 </script>
