@@ -44,7 +44,9 @@ export default {
 #b-head{
     display: flex;
     justify-content: center;
-    position: relative;
+    position: fixed;
+    left:0;
+    right:0;
     box-shadow: 0 0px 12px 0px #b3b3b3;
     background: #fff;
 }

@@ -40,4 +40,7 @@ export default {
     .markdown-area{
         font-size: 14px;
     }
+    body{
+        background: #fff;
+    }
 </style>
