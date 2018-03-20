@@ -1,3 +1,4 @@
 export const STATE = {
-	blogType: ''
+	blogType: '',
+	articleList:[]
 }

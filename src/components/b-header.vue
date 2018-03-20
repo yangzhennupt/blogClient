@@ -23,6 +23,7 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
 export default {
   data () {
     return {
@@ -31,10 +32,15 @@ export default {
       logoUrl:"/static/image/blog_logo.svg"
     }
   },
+  computed:{
+		...mapState(['blogType']),
+	},
   methods:{
     changMeau(name){
         this.$store.commit('filterBlog',name);
+        this.$router.push({path:'/'});
     }
+
   }
 }
 </script>

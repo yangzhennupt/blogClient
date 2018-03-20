@@ -10,7 +10,6 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Frame',
       component: Frame,
       children:[{
         path:'detail/:id?',

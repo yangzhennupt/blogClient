@@ -22,13 +22,8 @@ export default{
 	computed:{
 		...mapState(['blogType']),
 	},
-		
-
-
-
-
 	created(){
-		this.getBlogByType();
+		this.getBlogByType(this.blogType);
 	},
 	methods:{
 		getBlogByType(type){
