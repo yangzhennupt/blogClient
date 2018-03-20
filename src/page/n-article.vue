@@ -82,17 +82,17 @@ export default{
 	}
 	@media screen and (max-width: 1920px) {
 			#article-content{
-				width:100rem;
+				width:60rem;
 			}	
 	}
 	@media screen and (max-width: 1660px) {
 			#article-content{
-				width:80rem;
+				width:50rem;
 			}
 	}
 	@media screen and (max-width: 1366px) {
 			#article-content{
-				width:60rem;
+				width:40rem;
 			}
 	}
 	
