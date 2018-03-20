@@ -10,13 +10,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 body{
   font-size: 62.5%;
   height: 100%;
   background: #f3f3f3;
 }
-#app {
- 
-}
+
 </style>
