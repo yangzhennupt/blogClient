@@ -36,7 +36,7 @@ export default {
 
 }
 </script>
-<style scoped>
+<style lang="scss" scoped type="text/css">
     #blogDetail{
         background: #fff;
         width: 56rem;
@@ -44,8 +44,20 @@ export default {
         padding: 2rem;
         box-shadow: 0 1px 2px 0 rgba(0,0,0,.1);
         border-radius: 2px;
+        .markdown-area{
+            font-size: 14px;
+            &>p{
+                margin-bottom:10px;
+            }
+            blockquote{
+                p{
+                    padding: 0 1em;
+                    color: #6a737d;
+                    border-left: 0.25em solid #dfe2e5;
+                }
+            }
+
+        }
     }
-    .markdown-area{
-        font-size: 14px;
-    }
+    
 </style>
