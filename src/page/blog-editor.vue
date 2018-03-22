@@ -74,7 +74,7 @@ export default {
 }
 </script>
 
-<style  scoped lang="scss">
+<style   lang="scss">
 #blogEditor{
     padding: 20px;
 }

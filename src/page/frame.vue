@@ -23,7 +23,7 @@ export default{
 }
 </script>
 
-<style scoped lang="scss">
+<style  lang="scss">
 
 .b-content{
     padding: 20px;

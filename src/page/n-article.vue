@@ -50,7 +50,7 @@ export default{
 }
 </script>
 
-<style lang="scss" scoped >
+<style lang="scss" >
 	#article-content{
 		width: 100%;
 		margin: 0 auto;
