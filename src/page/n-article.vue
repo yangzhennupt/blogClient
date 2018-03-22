@@ -58,6 +58,7 @@ export default{
 		padding: 20px;
 		box-shadow: 1px 1px 5px #bdbdbd;
 		border-radius: 3px;
+		list-style: none;
 		.b-article{
 			border-bottom: 1px dashed #dedede;
 			padding: 5px 0;
