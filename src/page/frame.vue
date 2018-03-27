@@ -1,6 +1,8 @@
 <template>
 	<div id="b-wrap">
-		<BHeader></BHeader>
+        <keep-alive>
+		    <BHeader></BHeader>
+        </keep-alive>
         <div class="b-content">
             <router-view/>
         </div>		

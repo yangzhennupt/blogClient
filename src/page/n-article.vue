@@ -1,7 +1,7 @@
 <template>
 	<ul id="article-content">
 		<li class="b-article" v-for="item in  article" :key="item.blog_id">
-			<h1 class="article-title"><a :href="'/detail/'+item.blog_id">{{item.blog_title}}</a></h1>
+			<h1 class="article-title"><a :href="'/detail/'+item.blog_id" target="_blank">{{item.blog_title}}</a></h1>
 			
 			<p>{{item.blog_introduction}}</p>
 			<div class="article-info">{{item.blog_time}}</div>
