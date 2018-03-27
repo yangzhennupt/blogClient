@@ -54,9 +54,13 @@ export default {
                     padding: 0 1em;
                     color: #6a737d;
                     border-left: 0.25em solid #dfe2e5;
+                    margin:1rem 0;
                 }
             }
-
+            pre{
+                background-color: #f6f8fa;
+                padding: 1.6rem;
+            }
         }
     }
     

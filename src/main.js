@@ -12,7 +12,7 @@ import axios from 'axios';
 import 'iview/dist/styles/iview.css';
 import store from './store';
 import hljs from 'highlight.js';
-import 'highlight.js/styles/googlecode.css';
+import 'highlight.js/styles/github.css';
 Vue.config.productionTip = false;
 
 
