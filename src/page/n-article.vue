@@ -4,7 +4,7 @@
 			<h1 class="article-title"><a :href="'/#/detail/'+item.blog_id" target="_blank">{{item.blog_title}}</a></h1>
 			
 			<p>{{item.blog_introduction}}</p>
-			<div class="article-info">{{item.blog_time}}</div>
+			<div class="article-info"><span class="type-tip" :class="{frontend:item.blog_type==1,backend:item.blog_type==2}">{{dealType(item.blog_type)}}</span>{{item.blog_time}}</div>
 		</li>
 	</ul>
 </template>
@@ -21,6 +21,11 @@ export default{
 	},
 	computed:{
 		...mapState(['blogType']),
+		typeObj(){
+			return {
+
+			}
+		}
 	},
 	created(){
 		this.getBlogByType(this.blogType);
@@ -39,6 +44,12 @@ export default{
 				console.log(err);
 				this.$Spin.hide();
 			})
+		},
+		dealType(type){
+			let typeInfo = type==1?"前端":(type==2?"后端":"大杂烩");
+		 
+				
+			return typeInfo;
 		}
 	},
 	watch:{
@@ -76,6 +87,23 @@ export default{
 			}
 			.article-info{
 				color: #999;
+				.type-tip{
+					display: inline-block;
+					margin-right: 1rem;
+					padding: .38rem 0;
+					min-width: 2.5rem;
+					text-align: center;
+					line-height: 1;
+					color: #fff;
+					background-color: #c69f42;
+					border-radius: 2px;
+					&.frontend{
+						background-color: #56c4e1;
+					}
+					&.backend{
+						background-color: #857dea;
+					}
+				}
 			}
 		}
 			
