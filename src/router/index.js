@@ -1,31 +1,26 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Frame from '@/page/frame.vue';
-import BlogEditor from '@/page/blog-editor.vue';
-import BlogDetail from '@/page/blog-detail.vue';
-import BlogList from '@/page/n-article.vue';
 Vue.use(Router)
-
 export default new Router({
   base:'/blog/',
   mode:'history',
   routes: [
     {
       path: '/',
-      component: Frame,
+      component: ()=>import ('@/page/frame.vue'),
       children:[{
         path:'detail/:id?',
-        component:BlogDetail
+        component:()=> import ('@/page/blog-detail.vue')
       },
       {
         path:'',
-        component:BlogList
+        component:()=> import ('@/page/n-article.vue')
       }]
     },
     {
       path:'/edit/:id?',
       name:'BlogEditor',
-      component:BlogEditor
+      component:()=> import ('@/page/blog-editor.vue')
     }/*,
     {
       path:'/detail/:id?',
