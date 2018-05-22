@@ -4,6 +4,7 @@ import Frame from '@/page/frame.vue';
 import BlogEditor from '@/page/blog-editor.vue';
 import BlogDetail from '@/page/blog-detail.vue';
 import BlogList from '@/page/n-article.vue';
+import Test from '@/page/test.vue';
 Vue.use(Router)
 
 export default new Router({
@@ -25,11 +26,11 @@ export default new Router({
       path:'/edit/:id?',
       name:'BlogEditor',
       component:BlogEditor
-    }/*,
+    },
     {
-      path:'/detail/:id?',
-      name:'BlogDetail',
-      component:BlogDetail
-    }*/
+      path:'/test',
+      name:'test',
+      component:Test
+    }
   ]
 })
