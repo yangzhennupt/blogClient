@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 Vue.use(Router)
 export default new Router({
-  base:'/blog/',
+//  base:'/blog/',
   mode:'history',
   routes: [
     {
