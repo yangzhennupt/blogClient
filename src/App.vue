@@ -16,5 +16,8 @@ body{
   height: 100%;
   background: #f3f3f3;
 }
+#app{
+      overflow-x: auto;
+}
 
 </style>

@@ -21,11 +21,6 @@ export default new Router({
       path:'/edit/:id?',
       name:'BlogEditor',
       component:()=> import ('@/page/blog-editor.vue')
-    },
-    {
-      path:'/test',
-      name:'Test',
-      component:()=> import ('@/page/test.vue')
     }
   ]
 })

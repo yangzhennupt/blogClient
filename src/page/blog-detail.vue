@@ -13,8 +13,8 @@ export default {
             }
         }
     },
-    computed:{     
-		 transArticle(){			 
+    computed:{
+		 transArticle(){
              return this.$marked(this.blog.blog_content);
 		 }
     },
@@ -61,7 +61,10 @@ export default {
                 background-color: #f6f8fa;
                 padding: 1.6rem;
             }
+            img{
+              width:100%;
+            }
         }
     }
-    
+
 </style>
