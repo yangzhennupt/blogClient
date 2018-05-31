@@ -2,14 +2,14 @@ import Vue from 'vue';
 import Router from 'vue-router';
 Vue.use(Router)
 export default new Router({
-//  base:'/blog/',
+  // base:'/blog/',
   mode:'history',
   routes: [
     {
       path: '/',
       component: ()=>import ('@/page/frame.vue'),
       children:[{
-        path:'detail/:id?',
+        path:'/detail/:id',
         component:()=> import ('@/page/blog-detail.vue')
       },
       {

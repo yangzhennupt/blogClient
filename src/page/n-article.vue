@@ -1,8 +1,8 @@
 <template>
 	<ul id="article-content">
 		<li class="b-article" v-for="item in  article" :key="item.blog_id">
-			<h1 class="article-title"><a :href="'/blog/detail/'+item.blog_id" target="_blank">{{item.blog_title}}</a></h1>
-			
+			<h1 class="article-title"><a :href="'/detail/'+item.blog_id" target="_blank">{{item.blog_title}}</a></h1>
+
 			<p>{{item.blog_introduction}}</p>
 			<div class="article-info"><span class="type-tip" :class="{frontend:item.blog_type==1,backend:item.blog_type==2}">{{dealType(item.blog_type)}}</span>{{item.blog_time}}</div>
 		</li>
@@ -47,8 +47,8 @@ export default{
 		},
 		dealType(type){
 			let typeInfo = type==1?"前端":(type==2?"后端":"大杂烩");
-		 
-				
+
+
 			return typeInfo;
 		}
 	},
@@ -75,7 +75,7 @@ export default{
 			padding: 5px 0;
 			>h1{
 				margin-bottom: 5px;
-				
+
 				a{
 					color: #333
 				}
@@ -106,13 +106,13 @@ export default{
 				}
 			}
 		}
-			
-		
+
+
 	}
 	@media screen and (max-width: 1920px) {
 			#article-content{
 				width:60rem;
-			}	
+			}
 	}
 	@media screen and (max-width: 1660px) {
 			#article-content{
@@ -124,5 +124,5 @@ export default{
 				width:40rem;
 			}
 	}
-	
+
 </style>
