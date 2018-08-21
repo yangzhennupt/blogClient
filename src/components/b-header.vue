@@ -1,6 +1,6 @@
 <template>
   <header id="b-head">
-    <img  :src="logoUrl" class="b-logo">
+    <i class="b-logo"></i>
     <Menu mode="horizontal" :theme="theme1" active-name=""  @on-select="changMeau">
         <MenuItem name="">
             <Icon type="home"></Icon>
@@ -29,7 +29,7 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App',
       theme1:"light",
-      logoUrl:"../../static/image/blog_logo.svg"
+      logoUrl:"../assets/images/blog_logo.svg"
     }
   },
   computed:{
@@ -61,6 +61,8 @@ export default {
     left: 100px;
     width: 60px;
     height: 60px;
+    background:url(../assets/images/blog_logo.svg) no-repeat center center;
+    background-size: cover;
      
 }
 </style>

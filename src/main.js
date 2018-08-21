@@ -2,14 +2,14 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
+import router from './router/index'
 import Vuex from 'vuex';
 import marked from 'marked';
 import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 import axios from 'axios';
 import 'iview/dist/styles/iview.css';
-import store from './store';
+import store from './store/index';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github.css';
 import {Form,Input,Select,Button,Menu,Icon,MenuItem,Spin} from 'iview';
@@ -43,9 +43,7 @@ Vue.prototype.$marked = marked;
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  render: h => h(App),
   router,
-  store,
-  template: '<App/>',
-  components: { App }
-})
+  store
+}).$mount('#app')
