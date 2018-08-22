@@ -6,33 +6,33 @@
 
 <script>
 export default {
-    data(){
-        return {
-            blog:{
-              blog_content:  ''
-            }
-        }
-    },
-    computed:{
-		 transArticle(){
-             return this.$marked(this.blog.blog_content);
-		 }
-    },
-    created(){
-        let self = this,
-            id = this.$route.params.id;
-            this.$Spin.show();
-			this.$axios.get('/api/blog/detail/'+id).then(res=>{
-				self.blog  = res.data;
-				this.$Spin.hide();
-			}).catch(err=>{
-				console.log(err);
-				this.$Spin.hide();
-			})
-    },
-    methods:{
-
+  data () {
+    return {
+      blog: {
+        blog_content: ''
+      }
     }
+  },
+  computed: {
+    transArticle () {
+      return this.$marked(this.blog.blog_content)
+    }
+  },
+  created () {
+    let self = this
+    let id = this.$route.params.id
+    this.$Spin.show()
+    this.$axios.get('/api/blog/detail/' + id).then(res => {
+      self.blog = res.data
+      this.$Spin.hide()
+    }).catch(err => {
+      console.log(err)
+      this.$Spin.hide()
+    })
+  },
+  methods: {
+
+  }
 
 }
 </script>

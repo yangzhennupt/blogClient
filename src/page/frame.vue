@@ -1,27 +1,26 @@
 <template>
-	<div id="b-wrap">
-        <keep-alive>
-		    <BHeader></BHeader>
+  <div id="b-wrap">
+    <keep-alive>
+        <BHeader></BHeader>
         </keep-alive>
         <div class="b-content">
             <router-view/>
-        </div>		
-	</div>
+        </div>
+    </div>
 </template>
 
 <script>
-import BHeader from '@/components/b-header';
-import NArticle from '@/page/n-article';
+import BHeader from '@/components/b-header'
 export default{
-	name:'frame',
-    data(){
-        return {
-            msg:"yangz is god"
-        }
-    },
-    components:{
-    	BHeader
+  name: 'frame',
+  data () {
+    return {
+      msg: 'yangz is god'
     }
+  },
+  components: {
+    BHeader
+  }
 }
 </script>
 
