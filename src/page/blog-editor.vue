@@ -1,24 +1,22 @@
 <template>
   <div id="blogEditor">
     <Form :model="blog" label-position="left" >
-         <FormItem label="请输入文章的标题：">
-            <Input v-model="blog.title"></Input>
-        </FormItem>
-        <FormItem label="请输入文章的简介：">
-            <Input v-model="blog.introduction"></Input>
-        </FormItem>
-        <FormItem label="请选择文章的分类：">
-            <Select v-model="blog.type" style="width:200px">
-                <Option v-for="item in typeList" :value="item.value" :key="item.value">{{ item.label }}</Option>
-            </Select>
-        </FormItem>
+      <FormItem label="请输入文章的标题：">
+        <Input v-model="blog.title"/>
+      </FormItem>
+      <FormItem label="请输入文章的简介：">
+        <Input v-model="blog.introduction"/>
+      </FormItem>
+      <FormItem label="请选择文章的分类：">
+        <Select v-model="blog.type" style="width:200px">
+          <Option v-for="item in typeList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+        </Select>
+      </FormItem>
     </Form>
     <mavon-editor v-model="blog.value"/>
     <Button type="primary" @click="submitText" class="saveBtn">保存</Button>
   </div>
-
 </template>
-
 <script>
 export default {
   data () {
@@ -77,7 +75,6 @@ export default {
   },
   computed: {},
   created () {
-    console.log(this.$route.params)
   }
 }
 </script>
